@@ -1,0 +1,9 @@
+version: '3'
+services:
+  gcloud-mvn:
+    image: emergya/gcloud-mvn
+    entrypoint: /bin/bash
+    volumes:
+      - "${GCLOUD_CONF_DIR}:/root/.config"
+      - "${PROJECT_DIR}:/src"
+      - "${PWD}/deploy.sh:/deploy.sh"
